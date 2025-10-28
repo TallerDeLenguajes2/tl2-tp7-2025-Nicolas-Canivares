@@ -16,8 +16,6 @@ public class ProductoController : ControllerBase
     [HttpPost("api/Producto")]
     public IActionResult addNewProducto(Productos producto)
     {
-
-
         if (productoRepository.addNewProducto(producto))
         {
             return Ok("Producto Creado Correctamente!");

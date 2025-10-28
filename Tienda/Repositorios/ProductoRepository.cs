@@ -112,11 +112,12 @@ public class ProductoRepository
                 command.Parameters.AddWithValue("@idProd", idProducto);
                 using (var reader = command.ExecuteReader())
                 {
+                    var productoBuscado = new Productos();
 
                     if (reader.Read())
                     {
-                        var productoBuscado = new Productos();
-
+                        
+                        
                         //Carga de producto
                         productoBuscado.IdProducto = Convert.ToInt32(reader["idProducto"]);
                         productoBuscado.Descripcion = reader["Descripcion"].ToString();
@@ -125,7 +126,7 @@ public class ProductoRepository
                         return productoBuscado;
                     }
 
-                    return null;
+                    return productoBuscado;
 
                 }
             }

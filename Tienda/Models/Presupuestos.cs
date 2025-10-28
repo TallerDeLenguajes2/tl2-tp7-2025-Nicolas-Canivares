@@ -9,6 +9,9 @@ public class Presupuestos
 
     private List<PresupuestoDetalle> detalle;
 
+    public Presupuestos()
+    {
+    }
     public Presupuestos(int idPresupuesto, string nombreDestinatario, DateOnly fechaCreacion, List<PresupuestoDetalle> detalle)
     {
         this.IdPresupuesto = idPresupuesto;
